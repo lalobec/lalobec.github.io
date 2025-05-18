@@ -1,9 +1,14 @@
+* { box-sizing: border-box; }
+
 h1 {
   text-align: center;
 }
 
-body {
-  font-family: 
+html, body {
+  margin: 0;
+  background-color: #eee;
+  /*display: flex;*/
+  justify-content: center;
 }
 
 .pot-entry {
@@ -43,3 +48,78 @@ td {
 td:nth-child(6) { /* Select the 4th column */
   text-align: left;
 }
+
+
+/*For the chart*/
+.chart {
+  display: grid;
+  height: 30vh;
+  width: 100vw;
+  grid-template-columns: repeat(500, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-row-gap: 5px;
+  padding: 5px 10px;
+}
+
+[class*="bar"] {
+  grid-column-start: 1;
+  grid-column-end: 101;
+  border-radius: 0 5px 5px 0;
+  background-color: #87bba2;
+}
+
+.bar-1 {
+  grid-column-end: 211
+}
+
+.bar-2 {
+  grid-column-end: 436
+}
+
+.bar-3 {
+  grid-column-end: 404
+}
+
+.bar-4 {
+  grid-column-end: 410
+}
+
+.bar-5 {
+  grid-column-end: 414
+}
+
+.bar-6 {
+  grid-column-end: 368
+}
+
+.bar-7 {
+  grid-column-end: 290
+}
+
+.bar-8 {
+  grid-column-end: 359
+}
+
+.bar-9 {
+  grid-column-end: 343
+}
+
+.bar-10 {
+  grid-column-end: 140
+}
+
+
+
+
+
+/*
+@mixin chartValue($data) {
+  $totalRows: 101;
+  $result: $totalRows - $data;
+  grid-row-start: $result;
+}
+
+.bar-1 {
+  @include chartValue(20);
+}
+*/
