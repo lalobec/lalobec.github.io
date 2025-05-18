@@ -54,7 +54,7 @@ td:nth-child(6) { /* Select the 4th column */
 .chart {
   display: grid;
   height: 30vh;
-  width: 100vw;
+  width: 80vw;
   grid-template-columns: repeat(500, 1fr);
   grid-template-rows: repeat(10, 1fr);
   grid-row-gap: 5px;
@@ -64,12 +64,15 @@ td:nth-child(6) { /* Select the 4th column */
 [class*="bar"] {
   grid-column-start: 1;
   grid-column-end: 101;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 5px 5px 5px;
   background-color: #87bba2;
+  color: white;
+  padding: 2px;
+
 }
 
 .bar-1 {
-  grid-column-end: 211
+  grid-column-end: 211;
 }
 
 .bar-2 {
@@ -105,7 +108,8 @@ td:nth-child(6) { /* Select the 4th column */
 }
 
 .bar-10 {
-  grid-column-end: 140
+  grid-column-end: 140;
+  background-color: #4e7864;
 }
 
 
